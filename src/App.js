@@ -8,6 +8,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   const [songs, setSongs] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
     getAllSongs();
@@ -17,24 +18,6 @@ function App() {
     try {
       let response = await axios.get('http://127.0.0.1:5000/api/songs');
       setSongs(response.data.songs);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async function searchSongs(searchQuery) {
-    try {
-      const response = await axios.get('http://127.0.0.1:5000/api/songs/')
-      const filteredSongs = response.data.songs.filter((song) => {
-        return (
-          song.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          song.album.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          song.artist.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          song.genre.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          song.release_date.includes(searchQuery) 
-        );
-      });
-      setSongs(filteredSongs);
     } catch (error) {
       console.log(error);
     }
@@ -62,10 +45,10 @@ function App() {
         <NavBar />
       </div>
       <div>
-        <SearchBar searchSongs={searchSongs}/>
+        <SearchBar setSearchQuery={setSearchQuery}/>
       </div>
       <div>
-        <MusicTable songs={songs}/>
+        <MusicTable songs={songs} searchQuery={searchQuery}/>
       </div>
       <div>
         <AddSongForm addSong={addSong}/>
