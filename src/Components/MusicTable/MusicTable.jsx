@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import './MusicTable.css';
 
-const MusicTable = (props) => {
+const MusicTable = ({songs}) => {
+
     return ( 
-        <table>
+        <table className='music-table' >
             <thead>
             <tr>
                 <th>Title</th>
@@ -13,9 +14,9 @@ const MusicTable = (props) => {
             </tr>
             </thead>
             <tbody>
-            {props.songs.map((song) => {
+            {songs.map((song, index) => {
                 return (
-                <tr>
+                <tr key={index}>
                     <td>{song.title}</td>
                     <td>{song.artist}</td>
                     <td>{song.album}</td>

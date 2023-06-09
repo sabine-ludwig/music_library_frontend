@@ -1,11 +1,15 @@
-
+import './NavBar.css'
 
 const NavBar = (props) => {
     return (
-        <nav>
-            <h1>Music Library</h1>
+        <nav className='nav'>
+            <h2>Music Library</h2>
         </nav>
-    );
+    )
 }
 
-export default NavBar
+export default NavBar;
+
+
+    
+

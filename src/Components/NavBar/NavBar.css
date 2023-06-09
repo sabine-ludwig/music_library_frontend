@@ -1,0 +1,11 @@
+.nav {
+    background-color: lavender;
+    display: flex;
+    justify-content: left;
+    padding: .75rem 0;
+}
+
+.nav h2 {
+    margin-left: 2rem;
+    color: rgba(121, 82, 128, 0.81);
+}

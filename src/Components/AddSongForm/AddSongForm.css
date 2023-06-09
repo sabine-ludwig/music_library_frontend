@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    border: none;
+    padding: 1rem;
+    background-color: lavender;
+}
+
+.form button {
+    padding: .25rem;
+    width: 25%;
+    margin: auto;
+    margin-top: .25rem;
+    background-color: white;
+    border: none;
+    color: rgba(121, 82, 128, 0.81);
+}
+
+.form label {
+    margin-right: auto;
+    padding-left: .25rem;
+    color: rgba(121, 82, 128, 0.81);
+}
+
+.form input {
+    margin-bottom: .5rem;
+    border: none;
+    padding: .25rem;
+    color: rgba(121, 82, 128, 0.81);
+}

@@ -1,0 +1,24 @@
+.music-table {
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: rgba(121, 82, 128, 0.81);
+    border-collapse: collapse;
+}
+
+.music-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lavender;
+    color: rgba(121, 82, 128, 0.81);
+    padding-left: .25rem;
+}
+
+.music-table td {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
