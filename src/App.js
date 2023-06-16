@@ -24,6 +24,7 @@ function App() {
   }
 
   async function addSong(newSong) {
+    console.log(newSong);
     try {
       let response = await axios.post('http://127.0.0.1:5000/api/songs', newSong)
       if (response.status === 201) {
@@ -33,11 +34,6 @@ function App() {
       console.log(error);
     }
   }
-
-  // function addNewSong(song) {
-  //   let tempSongs = [song, ...songs];
-  //   setSongs(tempSongs);
-  // }
 
   return (
     <div className="App">
